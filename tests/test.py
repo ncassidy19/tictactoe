@@ -26,6 +26,7 @@ class PlayerInputMockTest(TestCase):
 
 
 class checkTieStubTest(TestCase):
+    tictactoe = tictactoe
 
     def __init__(self, tie):
         self.tie = tie

@@ -19,6 +19,7 @@ def playerInput(board):
     else:
         print("Pick another position")
 
+
 def checkHorizontal(board):
     global winner
     if board[0] == board[1] == board[2]:
@@ -30,6 +31,7 @@ def checkHorizontal(board):
     elif board[6] == board[7] == board[8]:
         winner = board[6]
         return True
+
 
 def checkVertical(board):
     global winner
@@ -43,6 +45,7 @@ def checkVertical(board):
         winner = board[2]
         return True
 
+
 def checkDiagonal(board):
     global winner
     if board[0] == board[4] == board[8]:
@@ -52,6 +55,7 @@ def checkDiagonal(board):
         winner = board[2]
         return True
 
+
 def checkTie(board):
     global gameRunning
     if "-" not in board:
@@ -59,9 +63,11 @@ def checkTie(board):
         print("It's a tie")
         gameRunning = False
 
+
 def checkWin():
     if checkHorizontal(board) or checkVertical(board) or checkDiagonal(board):
         print(f"The winner is {winner}")
+
 
 def switchPlayer():
     global currentPlayer
@@ -69,6 +75,7 @@ def switchPlayer():
         currentPlayer = "O"
     else:
         currentPlayer = "X"
+
 
 while gameRunning:
     printBoard(board)

@@ -76,3 +76,4 @@ class tictactoe:
         checkWin()
         checkTie(board)
         switchPlayer()
+

@@ -23,3 +23,5 @@ class PlayerInputMockTest(TestCase):
         value = self.input_v[self.input_index]
         self.input_index += 1
         return value
+
+

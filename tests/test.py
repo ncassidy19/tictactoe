@@ -2,16 +2,6 @@ from unittest import TestCase
 from tictactoe import tictactoe
 
 
-class PBMockTest(TestCase):
-    tictactoe = tictactoe
-
-    def __init__(self):
-        self.print_board = None
-
-    def print_board(self, board):
-        self.print_board = board
-
-
 class PlayerInputMockTest(TestCase):
     tictactoe = tictactoe
 
@@ -23,6 +13,16 @@ class PlayerInputMockTest(TestCase):
         value = self.input_v[self.input_index]
         self.input_index += 1
         return value
+
+
+class PBMockTest(TestCase):
+    tictactoe = tictactoe
+
+    def __init__(self):
+        self.print = None
+
+    def print(self, board):
+        self.print = board
 
 
 class CheckIfTieStubTest(TestCase):

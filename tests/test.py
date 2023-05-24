@@ -25,3 +25,14 @@ class PlayerInputMockTest(TestCase):
         return value
 
 
+class checkTieStubTest(TestCase):
+
+    def __init__(self, tie):
+        self.tie = tie
+
+    def is_tie(self, board):
+        return self.tie
+
+    def isnt_tie(self, board):
+        self.tie = False
+        return self.tie
